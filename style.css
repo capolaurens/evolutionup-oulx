@@ -177,9 +177,9 @@ h1 {
   gap: 48px;
   border-top: 1px solid var(--line);
 }
-.split:first-of-type { border-top: 0; }
-#orari { margin-top: 88px; }
-#contatti { margin-top: 72px; padding-bottom: 72px; }
+.split--first { margin-top: 88px; border-top: 0; padding-top: 0; }
+.split + .split { margin-top: 72px; }
+#contatti { padding-bottom: 72px; }
 
 .split h2 {
   font-size: 15px;
@@ -187,6 +187,23 @@ h1 {
   text-transform: uppercase;
   font-weight: 600;
 }
+
+.prose { max-width: 600px; }
+.prose p { color: var(--ink-soft); }
+.prose p + p { margin-top: 18px; }
+.prose a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
+.prose a:hover { border-color: var(--red); }
+
+.list { list-style: none; margin: 0; padding: 0; max-width: 600px; }
+.list li { padding: 22px 0; border-top: 1px solid var(--line); }
+.list li:first-child { border-top: 0; padding-top: 0; }
+.list h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.list p { color: var(--ink-soft); font-size: 16px; }
+
+.tags { list-style: none; margin: 24px 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; max-width: 600px; }
+.tags li { padding: 8px 14px; border: 1px solid var(--ink); font-size: 14px; letter-spacing: 0.02em; }
+
+#abbonamenti .actions { margin-top: 28px; }
 
 .hours { max-width: 480px; }
 .hours div {
